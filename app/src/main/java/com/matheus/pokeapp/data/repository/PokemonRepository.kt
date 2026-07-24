@@ -5,9 +5,9 @@ import com.matheus.pokeapp.data.remote.*
 class PokemonRepository(
     private val api: PokemonApi
 ) {
-    suspend fun getPokemons() =
+    suspend fun getPokemonList() =
         api.getPokemonList()
 
-    suspend fun getPokemons(name: String) =
-        api.getPokemon(name)
+    suspend fun getPokemons(id: Int) =
+        api.getPokemon(id)
 }
