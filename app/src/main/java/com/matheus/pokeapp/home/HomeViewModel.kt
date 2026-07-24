@@ -43,9 +43,6 @@ class HomeViewModel(
                 _isLoading.value = false
 
             }
-
         }
-
     }
-
 }

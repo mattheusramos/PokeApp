@@ -13,3 +13,4 @@ val Pink40 = Color(0xFF7D5260)
 //CORES PROJETO
 
 val VermelhoPrincipal = Color(0xFFB02528)
+val CorCard = Color(0xFFEFEEEE)
