@@ -23,7 +23,7 @@ fun LoginScreen(
     onLoginClick: (String, String) -> Unit,
     onVisitClick: () -> Unit,
 ){
-    var email by remember { mutableStateOf("") }
+    var usuario by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
     Column(
@@ -42,9 +42,9 @@ fun LoginScreen(
         )
 
         OutlinedTextField(
-            value = email,
-            onValueChange = { email = it },
-            label = { Text("Email") },
+            value = usuario,
+            onValueChange = { usuario = it },
+            label = { Text("Usuário") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp),
@@ -64,8 +64,8 @@ fun LoginScreen(
 
         Button(
             onClick = {
-                if (email == "teste" && password == "123456") {
-                    onLoginClick(email, password)
+                if (usuario == "teste" && password == "123456") {
+                    onLoginClick(usuario, password)
                 }
             },
             modifier = Modifier

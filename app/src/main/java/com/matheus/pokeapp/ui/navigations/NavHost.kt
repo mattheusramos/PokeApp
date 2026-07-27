@@ -33,8 +33,7 @@ fun AppNavigation() {
             HomeScreen(
                 onPokemonClick = { id ->
                     navController.navigate("details/$id")
-                },
-                onSettingsClick = { }
+                }
             )
         }
 
@@ -49,7 +48,10 @@ fun AppNavigation() {
 
             val id = backStackEntry.arguments?.getInt("id") ?: 1
 
-            DetailScreen(id = id)
+            DetailScreen(
+                id = id,
+                onBackClick = { navController.popBackStack() }
+            )
 
         }
 

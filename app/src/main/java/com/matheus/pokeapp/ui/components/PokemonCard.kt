@@ -54,14 +54,6 @@ fun PokemonCard(
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold
                 )
-
-//              Row(
-//                  horizontalArrangement = Arrangement.spacedBy(8.dp)
-//              ) {
-//                  pokemon.types.forEach {
-//                      TypeChip(it.type.name)
-//                  }
-//              }
             }
 
             AsyncImage(

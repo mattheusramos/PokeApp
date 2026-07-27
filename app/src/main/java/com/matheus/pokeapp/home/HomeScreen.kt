@@ -27,7 +27,6 @@ import com.matheus.pokeapp.ui.components.PokemonCard
 fun HomeScreen(
     viewModel: HomeViewModel = viewModel(),
     onPokemonClick: (Int) -> Unit,
-    onSettingsClick: () -> Unit,
 ){
 
     val pokemons by viewModel.pokemons.collectAsState()
@@ -60,7 +59,6 @@ fun HomeScreen(
                 }
             )
         }
-        // bottombar = {}
     ) { paddingValues ->
 
         when {
@@ -147,6 +145,5 @@ fun HomeScreen(
 fun HomeScreenPreview(){
     HomeScreen(
         onPokemonClick = {  },
-        onSettingsClick = { }
     )
 }
