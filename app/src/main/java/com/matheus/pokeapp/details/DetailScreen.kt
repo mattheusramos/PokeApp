@@ -9,21 +9,8 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -36,9 +23,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
-import com.matheus.pokeapp.ui.components.ActionCard
 import com.matheus.pokeapp.R
-import com.matheus.pokeapp.ui.components.TypeChip
+import com.matheus.pokeapp.ui.components.*
 import com.matheus.pokeapp.utils.VermelhoPrincipal
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -144,7 +130,7 @@ fun DetailScreen(
                             .padding(horizontal = 16.dp),
                         horizontalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
-                        ActionCard(
+                        StatsCard(
                             modifier = Modifier
                                 .weight(1f),
                             title = "Altura",
@@ -152,7 +138,7 @@ fun DetailScreen(
                             icon = painterResource(id = R.drawable.height),
                         )
 
-                        ActionCard(
+                        StatsCard(
                             modifier = Modifier
                                 .weight(1f),
                             title = "Peso",
@@ -169,14 +155,14 @@ fun DetailScreen(
                             .padding(horizontal = 16.dp),
                         horizontalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
-                        ActionCard(
+                        StatsCard(
                             modifier = Modifier
                                 .weight(1f),
                             title = "Exp Base",
                             text = details.baseExperience,
                             icon = painterResource(id = R.drawable.exp),
                         )
-                        ActionCard(
+                        StatsCard(
                             modifier = Modifier
                                 .weight(1f),
                             title = "Tipo",

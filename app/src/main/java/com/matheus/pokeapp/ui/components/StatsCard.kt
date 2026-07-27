@@ -17,7 +17,7 @@ import com.matheus.pokeapp.R
 import com.matheus.pokeapp.utils.*
 
 @Composable
-fun ActionCard(
+fun StatsCard(
     title: String,
     text: String,
     icon: Painter,
@@ -66,8 +66,8 @@ fun ActionCard(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun ActionCardPreview() {
-    ActionCard (
+fun StatsCardPreview() {
+    StatsCard (
         title = "Altura",
         text = "2,07m",
         icon = painterResource(id = R.drawable.height),
