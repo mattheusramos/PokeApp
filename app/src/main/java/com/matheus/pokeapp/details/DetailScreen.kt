@@ -100,7 +100,7 @@ fun DetailScreen(
                         contentScale = ContentScale.Fit,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(250.dp)
+                            .height(230.dp)
                             .clip(RoundedCornerShape(16.dp))
                     )
                     Text(
@@ -172,6 +172,12 @@ fun DetailScreen(
                             icon = painterResource(id = R.drawable.habs),
                         )
                     }
+
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    BaseStatsCard(
+                        stats = details.stats
+                    )
 
                     Button(
                         onClick = { },
