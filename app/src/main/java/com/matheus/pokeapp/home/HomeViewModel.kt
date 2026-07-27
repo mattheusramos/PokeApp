@@ -23,6 +23,20 @@ class HomeViewModel(
     private val _error = MutableStateFlow<String?>(null)
     val error: StateFlow<String?> = _error.asStateFlow()
 
+    private val _search = MutableStateFlow("")
+    val search = _search.asStateFlow()
+
+    fun onSearchChange(text: String) {
+        _search.value = text
+        if (text.isBlank()) {
+            _pokemons.value = allPokemons
+        } else {
+            _pokemons.value = allPokemons.filter { it.name.contains(text, ignoreCase = true) }
+        }
+    }
+
+    private var allPokemons = listOf<PokemonResult>()
+
     init {
         getPokemons()
     }
@@ -34,6 +48,7 @@ class HomeViewModel(
             try {
                 val response = repository.getPokemonList()
 
+                allPokemons = response.results
                 _pokemons.value = response.results
 
             } catch (e: Exception) {
