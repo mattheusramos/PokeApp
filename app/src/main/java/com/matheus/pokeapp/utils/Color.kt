@@ -14,3 +14,4 @@ val Pink40 = Color(0xFF7D5260)
 
 val VermelhoPrincipal = Color(0xFFB02528)
 val CorCard = Color(0xFFEFEEEE)
+val IconCard = Color(0xFF8E706E)
