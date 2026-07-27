@@ -192,7 +192,7 @@ fun DetailScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 36.dp, vertical = 30.dp)
-                            .height(70.dp),
+                            .height(60.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = VermelhoPrincipal),
                         shape = RoundedCornerShape(30.dp)
                     ) {

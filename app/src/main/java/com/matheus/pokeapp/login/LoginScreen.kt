@@ -48,7 +48,7 @@ fun LoginScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp),
-            shape = RoundedCornerShape(16.dp)
+            shape = RoundedCornerShape(30.dp)
         )
 
         OutlinedTextField(
@@ -58,7 +58,7 @@ fun LoginScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp, vertical = 8.dp),
-            shape = RoundedCornerShape(16.dp),
+            shape = RoundedCornerShape(30.dp),
             visualTransformation = PasswordVisualTransformation()
         )
 
@@ -70,15 +70,15 @@ fun LoginScreen(
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 36.dp)
+                .padding(horizontal = 36.dp, vertical = 30.dp)
                 .height(50.dp),
-            shape = RoundedCornerShape(16.dp),
+            shape = RoundedCornerShape(30.dp),
             colors = ButtonDefaults.buttonColors(containerColor = VermelhoPrincipal)
         ) {
             Text(
                 text = "Login",
                 fontWeight = FontWeight.Bold,
-                fontSize = 13.sp
+                fontSize = 18.sp
             )
         }
 

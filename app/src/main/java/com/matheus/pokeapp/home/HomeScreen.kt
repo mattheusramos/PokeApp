@@ -111,7 +111,7 @@ fun HomeScreen(
                                     contentDescription = null
                                 )
                             },
-                            shape = RoundedCornerShape(16.dp),
+                            shape = RoundedCornerShape(30.dp),
                             singleLine = true
                         )
                     }
