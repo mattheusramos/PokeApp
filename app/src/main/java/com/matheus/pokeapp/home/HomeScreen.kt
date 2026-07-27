@@ -30,7 +30,6 @@ fun HomeScreen(
     viewModel: HomeViewModel = viewModel(),
     onPokemonClick: (Int) -> Unit,
 ){
-
     val pokemons by viewModel.pokemons.collectAsState()
     val search by viewModel.search.collectAsState()
     val loading by viewModel.isLoading.collectAsState()
@@ -107,7 +106,6 @@ fun HomeScreen(
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-
                     item {
                         OutlinedTextField(
                             value = search,
@@ -127,7 +125,6 @@ fun HomeScreen(
                         )
                     }
 
-
                     items(pokemons) { pokemon ->
                         val id = pokemon.url
                             .trimEnd('/')
@@ -140,15 +137,11 @@ fun HomeScreen(
                                 onPokemonClick(id)
                             }
                         )
-
                     }
-
                 }
             }
-
         }
     }
-
 }
 
 @Preview

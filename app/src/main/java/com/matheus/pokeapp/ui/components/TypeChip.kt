@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.matheus.pokeapp.utils.*
 
 @Composable
 fun TypeChip(
@@ -31,22 +32,14 @@ fun TypeChip(
 }
 
 fun getTypeColor(type: String): Color {
-
     return when(type.lowercase()) {
-
-        "grass" -> Color(0xFF4CAF50)
-
-        "fire" -> Color(0xFFFF7043)
-
-        "water" -> Color(0xFF42A5F5)
-
-        "electric" -> Color(0xFFFFCA28)
-
-        "bug" -> Color(0xFF8BC34A)
-
-        "poison" -> Color(0xFFAB47BC)
-
-        "normal" -> Color(0xFFBDBDBD)
+        "grass" -> Grass
+        "fire" -> Fire
+        "water" -> Water
+        "electric" -> Electric
+        "bug" -> Bug
+        "poison" -> Poison
+        "normal" -> Normal
 
         else -> Color.Gray
     }

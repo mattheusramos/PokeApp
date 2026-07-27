@@ -50,10 +50,8 @@ class HomeViewModel(
 
                 allPokemons = response.results
                 _pokemons.value = response.results
-
             } catch (e: Exception) {
                 _error.value = e.message
-
             } finally {
                 _isLoading.value = false
 

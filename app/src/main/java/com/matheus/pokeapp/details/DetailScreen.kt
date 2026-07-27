@@ -34,7 +34,6 @@ fun DetailScreen(
     onBackClick: () -> Unit,
     viewModel: DetailsViewModel = viewModel()
 ) {
-
     LaunchedEffect(id) {
         viewModel.loadPokemon(id)
     }
@@ -83,7 +82,6 @@ fun DetailScreen(
                 )
             }
         } else {
-
             pokemon?.let { details ->
                 Column(
                     modifier = Modifier

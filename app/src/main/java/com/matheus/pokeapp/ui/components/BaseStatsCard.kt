@@ -13,7 +13,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.matheus.pokeapp.data.model.StatsSlot
+import com.matheus.pokeapp.utils.Attack
 import com.matheus.pokeapp.utils.CorCard
+import com.matheus.pokeapp.utils.Defense
+import com.matheus.pokeapp.utils.Hp
+import com.matheus.pokeapp.utils.SpecialAttack
+import com.matheus.pokeapp.utils.SpecialDefense
+import com.matheus.pokeapp.utils.Speed
 
 @Composable
 fun BaseStatsCard(
@@ -69,17 +75,12 @@ fun BaseStatsCard(
 
 private fun statsColor(name: String): Color {
     return when(name) {
-        "hp" -> Color(0xFFF44336)
-
-        "attack" -> Color(0xFFFF9800)
-
-        "defense" -> Color(0xFF3F7AE0)
-
-        "special-attack" -> Color(0xFFFF9800)
-
-        "special-defense" -> Color(0xFF5C9DFF)
-
-        "speed" -> Color(0xFFE91E63)
+        "hp" -> Hp
+        "attack" -> Attack
+        "defense" -> Defense
+        "special-attack" -> SpecialAttack
+        "special-defense" -> SpecialDefense
+        "speed" -> Speed
 
         else -> Color.Gray
     }
