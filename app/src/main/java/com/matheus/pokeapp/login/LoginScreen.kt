@@ -54,7 +54,7 @@ fun LoginScreen(
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
-            label = { Text("Password") },
+            label = { Text("Senha") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp, vertical = 8.dp),
@@ -76,7 +76,7 @@ fun LoginScreen(
             colors = ButtonDefaults.buttonColors(containerColor = VermelhoPrincipal)
         ) {
             Text(
-                text = "Login",
+                text = "Entrar",
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp
             )
