@@ -34,7 +34,6 @@ fun PokemonCard(
         shape = RoundedCornerShape(24.dp),
         colors = CardDefaults.cardColors(containerColor = CorCard),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
-
     ) {
 
         Row(

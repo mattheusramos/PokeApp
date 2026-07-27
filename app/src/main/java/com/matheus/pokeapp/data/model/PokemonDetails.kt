@@ -1,6 +1,7 @@
 package com.matheus.pokeapp.data.model
 
 import com.google.gson.annotations.SerializedName
+import com.matheus.pokeapp.data.model.sprites.Sprites
 
 data class PokemonDetails(
 

@@ -3,7 +3,10 @@ package com.matheus.pokeapp.ui.navigations
 import com.matheus.pokeapp.home.HomeScreen
 import com.matheus.pokeapp.login.LoginScreen
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavType
 import androidx.navigation.compose.*
+import androidx.navigation.navArgument
+import com.matheus.pokeapp.details.DetailScreen
 
 @Composable
 fun AppNavigation() {
@@ -34,5 +37,21 @@ fun AppNavigation() {
                 onSettingsClick = { }
             )
         }
+
+        composable(
+            route = Screen.Details.route,
+            arguments = listOf(
+                navArgument("id") {
+                    type = NavType.IntType
+                }
+            )
+        ) { backStackEntry ->
+
+            val id = backStackEntry.arguments?.getInt("id") ?: 1
+
+            DetailScreen(id = id)
+
+        }
+
     }
 }
